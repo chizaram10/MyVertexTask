@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/MyVertexTask/Web.Release.config
+/MyVertexTask/Web.Debug.config
+/MyVertexTask/Web.config
