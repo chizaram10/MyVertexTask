@@ -196,9 +196,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="DAL\MyVertexTaskDBContext.cs" />
     <Compile Include="DAL\MyVertexTaskDBInitializer.cs" />
-    <Compile Include="Domain\Enums\Gender.cs" />
-    <Compile Include="Domain\Enums\PreviousSeasonsOfCompetitionInChosenSport.cs" />
-    <Compile Include="Domain\Enums\Sports.cs" />
     <Compile Include="Domain\Models\CollegeSport.cs" />
     <Compile Include="Domain\Models\HighSchool.cs" />
     <Compile Include="Domain\Models\PostHighSchoolExp.cs" />
