@@ -207,6 +207,10 @@
     <Compile Include="Migrations\202304272258004_Initial.designer.cs">
       <DependentUpon>202304272258004_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304281548540_Update.cs" />
+    <Compile Include="Migrations\202304281548540_Update.designer.cs">
+      <DependentUpon>202304281548540_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SER_Form.aspx.cs">
@@ -258,6 +262,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202304272258004_Initial.resx">
       <DependentUpon>202304272258004_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304281548540_Update.resx">
+      <DependentUpon>202304281548540_Update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
