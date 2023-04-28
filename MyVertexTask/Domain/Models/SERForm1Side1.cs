@@ -8,32 +8,32 @@ namespace MyVertexTask.Domain.Models
     {
         [Key, ScaffoldColumn(false)]
         public string Id { get; set; } = Guid.NewGuid().ToString();
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string Name { get; set; }
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string Gender { get; set; }
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string PresentCollege { get; set; }
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string PresentConference { get; set; }
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string Sports { get; set; }
-        [Required]
+        [Required(ErrorMessage = "*")]
         public int PreviousSeasons { get; set; }
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string StudentID { get; set; }
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string Telephone { get; set; }
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string PresentAddress { get; set; }
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string DateofFilled { get; set; }
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string DateOfBirth { get; set; }
 
         [ScaffoldColumn(false)]
         public string HighSchoolID { get; set; }
-        [Required]
+        
         public HighSchool HighSchool { get; set; }
 
         public ICollection<PostHighSchoolExp> PostHighSchoolExps { get; set; }

@@ -32,6 +32,10 @@
                 <div class="d-flex flex-column align-items-center">
                      <asp:DropDownList ID="DropDownList1" runat="server" Width="119px" Height="27px" style="border: solid 2px red">
                         <asp:ListItem Value="">Choose</asp:ListItem>
+                        <asp:ListItem Value="Football">Football </asp:ListItem>  
+                        <asp:ListItem Value="Basketball">Basketball</asp:ListItem>  
+                        <asp:ListItem Value="Track and Field">Track and Field</asp:ListItem>  
+                        <asp:ListItem Value="Volleyball">Volleyball</asp:ListItem>  
                     </asp:DropDownList>
                     <div>Sport This Season</div>
                 </div>
@@ -40,8 +44,9 @@
                         Previous Seasons of Competition Used in This Sports
                     </div>
                     <div>
-                        0 <asp:RadioButton ID="RadioButton1" runat="server"/> or 1
-                        <asp:RadioButton ID="RadioButton2" runat="server"/>
+                        0 <asp:RadioButton ID="RadioButton1" GroupName="PreviousSeasonsOptions" runat="server"/> or 1
+                        <asp:RadioButton ID="RadioButton2" GroupName="PreviousSeasonsOptions" runat="server"/>
+                        <%--<asp:RequiredFieldValidator ID="OptionsValidator" runat="server" ControlToValidate="RadioButton1" ErrorMessage="Please select an option." Display="Dynamic" />--%>
                     </div>
                 </div>
             </div>
@@ -119,18 +124,42 @@
                             </th>
                             <th style="width:400px; border: 1px solid black">Colleges Attended or Jobs Held, City, State</th>
                         </tr>
-                        <% for (int i = 1; i < 9; i++) 
-                            { %>
-                            <tr>
-                                <th><asp:TextBox ID="FromMo" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="56px"></asp:TextBox></th>
-                                <th><asp:TextBox ID="FromYr" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="55px" style="margin-left:-1px"></asp:TextBox></th>
-                                <th><asp:TextBox ID="ToMo" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
-                                <th><asp:TextBox ID="ToYr" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
-                                <th><asp:TextBox ID="CollegesJobs" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="400px" style="margin-left:-1px"></asp:TextBox></th>
-                            </tr>
-                            <%  
-                            }
-                            %>
+                        <tr>
+                            <th><asp:TextBox ID="FromMo1" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="56px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="FromYr1" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="55px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="ToMo1" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="ToYr1" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="CollegesJobs1" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="400px" style="margin-left:-1px"></asp:TextBox></th>
+                        </tr>
+                        <tr>
+                            <th><asp:TextBox ID="FromMo2" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="56px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="FromYr2" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="55px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="ToMo2" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="ToYr2" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="CollegesJobs2" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="400px" style="margin-left:-1px"></asp:TextBox></th>
+                        </tr>
+                        <tr>
+                            <th><asp:TextBox ID="FromMo3" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="56px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="FromYr3" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="55px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="ToMo3" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="ToYr3" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="CollegesJobs3" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="400px" style="margin-left:-1px"></asp:TextBox></th>
+                        </tr>
+                        <tr>
+                            <th><asp:TextBox ID="FromMo4" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="56px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="FromYr4" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="55px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="ToMo4" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="ToYr4" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="CollegesJobs4" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="400px" style="margin-left:-1px"></asp:TextBox></th>
+                        </tr>
+                        <tr>
+                            <th><asp:TextBox ID="FromMo5" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="56px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="FromYr5" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="55px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="ToMo5" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="ToYr5" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="61px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="CollegesJobs5" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="400px" style="margin-left:-1px"></asp:TextBox></th>
+                        </tr>
+                       
                     </thead>
                     
                 </table>
@@ -151,24 +180,33 @@
                             <th style="width:85px; border: 1px solid black">Semester</th>
                             <th style="width:55px; border: 1px solid black">Yr</th>
                         </tr>
-                        <% for (int i = 1; i < 5; i++) 
-                            { %>
-                            <tr>
-                                <th><asp:TextBox ID="Sport" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="150px"></asp:TextBox></th>
-                                <th><asp:TextBox ID="College" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="250px" style="margin-left:-1px"></asp:TextBox></th>
-                                <th><asp:TextBox ID="Varsity" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="95px" style="margin-left:-1px"></asp:TextBox></th>
-                                <th><asp:TextBox ID="Semester" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="85px" style="margin-left:-1px"></asp:TextBox></th>
-                                <th><asp:TextBox ID="Yr" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="55px" style="margin-left:-1px"></asp:TextBox></th>
-                            </tr>
-                           <%
-                            }
-                            %>
+                        <tr>
+                            <th><asp:TextBox ID="Sport1" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="150px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="College1" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="250px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="Varsity1" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="95px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="Semester1" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="85px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="Yr1" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="55px" style="margin-left:-1px"></asp:TextBox></th>
+                        </tr>
+                        <tr>
+                            <th><asp:TextBox ID="Sport2" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="150px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="College2" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="250px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="Varsity2" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="95px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="Semester2" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="85px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="Yr2" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="55px" style="margin-left:-1px"></asp:TextBox></th>
+                        </tr>
+                        <tr>
+                            <th><asp:TextBox ID="Sport3" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="150px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="College3" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="250px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="Varsity3" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="95px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="Semester3" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="85px" style="margin-left:-1px"></asp:TextBox></th>
+                            <th><asp:TextBox ID="Yr3" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Width="55px" style="margin-left:-1px"></asp:TextBox></th>
+                        </tr>
                     </thead>
                 </table>
             </div>
 
             <div class="mt-3 text-center fs-5 fw-bold">
-                <asp:Button ID="Button1" runat="server" Text="Submit" ToolTip="Submit" Width="200px" Height="40px" BorderWidth="10px" CssClass="fw-bold border border-secondary" style="border-radius:15px" />
+                <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Submit_Onclick" Width="200px" Height="40px" BorderWidth="10px" CssClass="fw-bold border border-secondary" style="border-radius:15px" />
             </div>
         </section>
     </main>
