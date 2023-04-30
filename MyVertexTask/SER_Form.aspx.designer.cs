@@ -24,6 +24,15 @@ namespace MyVertexTask
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
+        /// rfvTextBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTextBox1;
+
+        /// <summary>
         /// TextBox1 control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace MyVertexTask
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
+        /// rfvTextBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTextBox2;
+
+        /// <summary>
         /// TextBox2 control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,15 @@ namespace MyVertexTask
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
+
+        /// <summary>
+        /// rfvDropDownList1DropDownList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDropDownList1DropDownList1;
 
         /// <summary>
         /// DropDownList1 control.
@@ -69,6 +96,24 @@ namespace MyVertexTask
         protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
 
         /// <summary>
+        /// cvPreviousSeasonsOptions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvPreviousSeasonsOptions;
+
+        /// <summary>
+        /// rfvTextBox3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTextBox3;
+
+        /// <summary>
         /// TextBox3 control.
         /// </summary>
         /// <remarks>
@@ -76,6 +121,15 @@ namespace MyVertexTask
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox3;
+
+        /// <summary>
+        /// cvGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvGender;
 
         /// <summary>
         /// RadioButton3 control.
@@ -96,6 +150,15 @@ namespace MyVertexTask
         protected global::System.Web.UI.WebControls.RadioButton RadioButton4;
 
         /// <summary>
+        /// rfvTextBox4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTextBox4;
+
+        /// <summary>
         /// TextBox4 control.
         /// </summary>
         /// <remarks>
@@ -103,6 +166,24 @@ namespace MyVertexTask
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox4;
+
+        /// <summary>
+        /// revTextBox5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revTextBox5;
+
+        /// <summary>
+        /// rfvTextBox5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTextBox5;
 
         /// <summary>
         /// TextBox5 control.
@@ -114,6 +195,15 @@ namespace MyVertexTask
         protected global::System.Web.UI.WebControls.TextBox TextBox5;
 
         /// <summary>
+        /// rfvTextBox6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTextBox6;
+
+        /// <summary>
         /// TextBox6 control.
         /// </summary>
         /// <remarks>
@@ -121,6 +211,15 @@ namespace MyVertexTask
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox6;
+
+        /// <summary>
+        /// rfvTextBox7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTextBox7;
 
         /// <summary>
         /// TextBox7 control.
@@ -132,6 +231,24 @@ namespace MyVertexTask
         protected global::System.Web.UI.WebControls.TextBox TextBox7;
 
         /// <summary>
+        /// revTextBox8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revTextBox8;
+
+        /// <summary>
+        /// rfvTextBox8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTextBox8;
+
+        /// <summary>
         /// TextBox8 control.
         /// </summary>
         /// <remarks>
@@ -141,6 +258,15 @@ namespace MyVertexTask
         protected global::System.Web.UI.WebControls.TextBox TextBox8;
 
         /// <summary>
+        /// rfvTextBox9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTextBox9;
+
+        /// <summary>
         /// TextBox9 control.
         /// </summary>
         /// <remarks>
@@ -148,6 +274,24 @@ namespace MyVertexTask
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox9;
+
+        /// <summary>
+        /// revTextBox10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revTextBox10;
+
+        /// <summary>
+        /// rfvTextBox10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTextBox10;
 
         /// <summary>
         /// TextBox10 control.

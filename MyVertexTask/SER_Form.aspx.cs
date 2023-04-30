@@ -1,4 +1,5 @@
-﻿using MyVertexTask.Domain.Models;
+﻿using MyVertexTask.DAL.Repo;
+using MyVertexTask.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,23 @@ namespace MyVertexTask
 {
     public partial class SER_FORM : System.Web.UI.Page
     {
+        private readonly ISERForm1Side1Repo repo = new SERForm1Side1Repo();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+
+        protected void cvGender_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = RadioButton3.Checked || RadioButton4.Checked;
+        }
+
+        protected void cvPreviousSeasonsOptions_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = RadioButton1.Checked || RadioButton2.Checked;
+        }
+
 
         protected void Submit_Onclick(object sender, EventArgs e)
         {
@@ -33,9 +47,12 @@ namespace MyVertexTask
                     PresentAddress = TextBox6.Text,
                     DateofFilled = TextBox5.Text,
                     DateOfBirth = TextBox8.Text,
-                    PostHighSchoolExps = GetPostHighSchoolExps(this),
-                    CollegeSports = GetCollegeSports(this)
+                    PostHighSchoolExps = GetPostHighSchoolExps(FromMo1.Parent),
+                    CollegeSports = GetCollegeSports(FromMo1.Parent)
                 };
+
+                repo.SaveForm(filledForm);
+                Response.Redirect(Request.RawUrl + "?success=true");
             }
         }
 
@@ -48,17 +65,23 @@ namespace MyVertexTask
             };
         }
 
-        private static List<CollegeSport> GetCollegeSports(Page page)
+        private static List<CollegeSport> GetCollegeSports(Control control)
         {
-            var CollegeSports = new List<CollegeSport>();
+            var collegeSports = new List<CollegeSport>();
 
             for (int i = 1; i < 4; i++)
             {
-                string sports = ((TextBox)page.FindControl("Sports" + i)).Text;
-                string college = ((TextBox)page.FindControl("College" + i)).Text;
-                string varsity = ((TextBox)page.FindControl("Varsity" + i)).Text;
-                string semester = ((TextBox)page.FindControl("Semester" + i)).Text;
-                string yr = ((TextBox)page.FindControl("Yr" + i)).Text;
+                string sportsID = $"Sport{i}";
+                string collegeID = $"College{i}";
+                string varsityID = $"Varsity{i}";
+                string semesterID = $"Semester{i}";
+                string yrID = $"Yr{i}";
+
+                string sports = ((TextBox)control.FindControl(sportsID)).Text;
+                string college = ((TextBox)control.FindControl(collegeID)).Text;
+                string varsity = ((TextBox)control.FindControl(varsityID)).Text;
+                string semester = ((TextBox)control.FindControl(semesterID)).Text;
+                string yr = ((TextBox)control.FindControl(yrID)).Text;
 
 
                 if (!string.IsNullOrEmpty(sports) || !string.IsNullOrEmpty(college) ||
@@ -73,24 +96,30 @@ namespace MyVertexTask
                         Year = yr
                     };
 
-                    CollegeSports.Add(collegeSport);
+                    collegeSports.Add(collegeSport);
                 }
             }
 
-            return CollegeSports;
+            return collegeSports;
         }
 
-        private static List<PostHighSchoolExp> GetPostHighSchoolExps(Page page)
+        private static List<PostHighSchoolExp> GetPostHighSchoolExps(Control control)
         {
             List<PostHighSchoolExp> postHighSchoolExpList = new List<PostHighSchoolExp>();
 
             for (int i = 1; i < 6; i++)
             {
-                string fromMo = ((TextBox)page.FindControl("FromMo" + i)).Text;
-                string fromYr = ((TextBox)page.FindControl("FromYr" + i)).Text;
-                string toMo = ((TextBox)page.FindControl("ToMo" + i)).Text;
-                string toYr = ((TextBox)page.FindControl("ToYr" + i)).Text;
-                string collegesJobs = ((TextBox)page.FindControl("CollegesJobs" + i)).Text;
+                string fromMoID = $"FromMo{i}";
+                string fromYrID = $"fromYr{i}";
+                string toMoID = $"ToMo{i}";
+                string toYrID = $"ToYr{i}";
+                string collegesJobsID = $"CollegesJobs{i}";
+                
+                string fromMo = ((TextBox)control.FindControl(fromMoID)).Text;
+                string fromYr = ((TextBox)control.FindControl(fromYrID)).Text;
+                string toMo = ((TextBox)control.FindControl(toMoID)).Text;
+                string toYr = ((TextBox)control.FindControl(toYrID)).Text;
+                string collegesJobs = ((TextBox)control.FindControl(collegesJobsID)).Text;
 
                 
                 if (!string.IsNullOrEmpty(fromMo) || !string.IsNullOrEmpty(fromYr) ||
